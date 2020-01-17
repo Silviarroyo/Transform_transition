@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>transform</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        [class*="d"] {
+            width: 162.3px;
+            height: 244px;
+            overflow: hidden;
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: rotate3d(1, 0, 0, 5deg);
+            }
+
+            100% {
+                transform: rotate3d(1, 1, 0, 220deg);
+            }
+        }
+
+        .f1,
+        .f2 {
+            display: flex;
+        }
+
+        .d1:hover img {
+            transition-duration: 2s;
+            transform: translate(90px, 0px);
+            opacity: 1;
+        }
+
+        .d2 img {
+            transform: translate(-162.3px, 0);
+        }
+
+        .d2:hover img {
+            transform: scale(1.2) translate(-162.3px, 0);
+            transition-duration: 2s;
+        }
+
+        .d3 img {
+            transform: translate(-324.6px, 0);
+        }
+
+        .d3:hover img {
+            margin-top: -200px;
+            transition-duration: 2s;
+        }
+
+        .d4 img {
+            transform: translate(0, -244px);
+        }
+
+        .d4:hover img {
+            border-radius: 50%;
+            transition-duration: 2s;
+        }
+
+        .d5 img {
+            transform: translate(-162.3px, -244px);
+            opacity: 1;
+            transition: 0.5s opacity;
+        }
+
+        .d5:hover img {
+            opacity: 0.4;
+            transition-duration: 2s;
+        }
+
+        .d6 img {
+            transform: translate(-324.6px, -244px);
+        }
+
+        .d6:hover img {
+            transform: scale(1.2) translate(-324.6px, -244px);
+            transition-duration: 2s;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="f1">
+            <div class="d1">
+                <img id="uno" src="img/unnamed.jpg">
+            </div>
+            <div class="d2">
+                <img src="img/unnamed.jpg">
+            </div>
+            <div class="d3">
+                <img src="img/unnamed.jpg">
+            </div>
+        </div>
+        <div class="f2">
+            <div class="d4">
+                <img src="img/unnamed.jpg">
+            </div>
+            <div class="d5">
+                <img src="img/unnamed.jpg">
+            </div>
+            <div class="d6">
+                <img src="img/unnamed.jpg">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
